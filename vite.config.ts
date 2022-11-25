@@ -61,11 +61,6 @@ const legacyExtraConfig = {
       context: 'window',
     },
   },
-  resolve: {
-    mainFields: 'browser',
-    browserField: true,
-    dedupe: ['svelte'],
-  },
 };
 
 // https://vitejs.dev/config/
@@ -79,6 +74,11 @@ export default defineConfig({
         chunkFileNames: `bundle.[hash].js`,
         assetFileNames: `bundle.[hash].[ext]`,
       },
+    },
+  },
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
     },
   },
   server: {
