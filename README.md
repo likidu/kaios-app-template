@@ -1,6 +1,20 @@
-# Svelte + TS + Vite
+# KaiOS App Template using Svelte + TS + Vite
 
 This template should help get you started developing with Svelte and TypeScript in Vite.
+
+It uses [garredow/onyx-ui](https://github.com/garredow/onyx-ui), the source code resides in the `src/ui` folder.
+
+Build for KaiOS 3.x (Gecko 84, ES6+):
+
+```bash
+npm run build
+```
+
+Build for KaiOS 2.5.x (Gecko 48, ES5):
+
+```bash
+npm run build:legacy
+```
 
 ## Recommended IDE Setup
 
@@ -42,6 +56,6 @@ If you have state that's important to retain within a component, consider creati
 ```ts
 // store.ts
 // An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+import { writable } from 'svelte/store';
+export default writable(0);
 ```
