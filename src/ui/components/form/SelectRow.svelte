@@ -1,5 +1,5 @@
 <script lang="ts">
-  import MdExpandMore from 'svelte-icons/md/MdExpandMore.svelte';
+  import { IconChevronDown } from '@/ui/icons';
   import { v4 as uuidv4 } from 'uuid';
   import { IconSize } from '../../enums';
   import type { SelectOption } from '../../models';
@@ -29,7 +29,7 @@
 >
   <div class="select">
     {options.find((a) => a.id === value)?.label}
-    <Icon size={IconSize.Small}><MdExpandMore /></Icon>
+    <Icon size={IconSize.Small}><IconChevronDown /></Icon>
   </div>
 </FormRow>
 {#if open}

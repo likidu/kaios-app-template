@@ -1,8 +1,7 @@
 <script lang="ts">
   import { OnyxKeys } from 'onyx-keys';
   import { onDestroy } from 'svelte';
-  import MdChevronLeft from 'svelte-icons/md/MdChevronLeft.svelte';
-  import MdChevronRight from 'svelte-icons/md/MdChevronRight.svelte';
+  import { IconChevronLeft, IconChevronRight } from '@/ui/icons';
   import { IconSize } from '../../enums';
   import Icon from '../icon/Icon.svelte';
 
@@ -28,7 +27,7 @@
         }
       },
     },
-    { priority: 4 }
+    { priority: 4 },
   );
   $: {
     if (disabled) {
@@ -41,9 +40,9 @@
 </script>
 
 <div class="root">
-  <Icon size={IconSize.Small}><MdChevronLeft /></Icon>
+  <Icon size={IconSize.Small}><IconChevronLeft /></Icon>
   <div>{`${value}${valueLabel ?? ''}`}</div>
-  <Icon size={IconSize.Small}><MdChevronRight /></Icon>
+  <Icon size={IconSize.Small}><IconChevronRight /></Icon>
 </div>
 
 <style>

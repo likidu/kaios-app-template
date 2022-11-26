@@ -1,8 +1,7 @@
 <script lang="ts">
   import { OnyxKeys } from 'onyx-keys';
   import { onDestroy } from 'svelte';
-  import MdChevronLeft from 'svelte-icons/md/MdChevronLeft.svelte';
-  import MdChevronRight from 'svelte-icons/md/MdChevronRight.svelte';
+  import { IconChevronLeft, IconChevronRight } from '@/ui/icons';
   import { IconSize } from '../../enums/iconSize';
   import type { SelectOption } from '../../models';
   import { getIndex } from '../../utils';
@@ -41,7 +40,7 @@
         onChange(options[options.length - 1].id);
       },
     },
-    { priority: 4 }
+    { priority: 4 },
   );
   $: {
     if (disabled) {
@@ -54,9 +53,9 @@
 </script>
 
 <div class="root">
-  <Icon size={IconSize.Small} disabled={!hasPrev}><MdChevronLeft /></Icon>
+  <Icon size={IconSize.Small} disabled={!hasPrev}><IconChevronLeft /></Icon>
   <div class="title">{options.find((a) => a.id === value)?.label ?? '?'}</div>
-  <Icon size={IconSize.Small} disabled={!hasNext}><MdChevronRight /></Icon>
+  <Icon size={IconSize.Small} disabled={!hasNext}><IconChevronRight /></Icon>
 </div>
 
 <style>

@@ -1,6 +1,13 @@
 export { default as IconBackward } from './IconBackward.svelte';
+export { default as IconCheck } from './IconCheck.svelte';
+export { default as IconChevronDown } from './IconChevronDown.svelte';
+export { default as IconChevronLeft } from './IconChevronLeft.svelte';
 export { default as IconChevronRight } from './IconChevronRight.svelte';
+export { default as IconCircleError } from './IconCircleError.svelte';
+export { default as IconCircleInfo } from './IconCircleInfo.svelte';
+export { default as IconCircleWarning } from './IconCircleWarning.svelte';
 export { default as IconDiscover } from './IconDiscover.svelte';
+export { default as IconDotsVertical } from './IconDotsVertical.svelte';
 export { default as IconForward } from './IconForward.svelte';
 export { default as IconHeadphone } from './IconHeadphone.svelte';
 export { default as IconComment } from './IconComment.svelte';

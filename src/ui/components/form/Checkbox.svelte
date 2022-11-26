@@ -1,6 +1,5 @@
 <script lang="ts">
-  // TODO: Remove svelte-icons dependency
-  import MdCheck from 'svelte-icons/md/MdCheck.svelte';
+  import IconCheck from '@/ui/icons/IconCheck.svelte';
   import { Color } from '../../enums';
   import Icon from '../icon/Icon.svelte';
 
@@ -9,11 +8,8 @@
 
 <div class="root">
   {#if checked}
-    <Icon color={Color.Accent}><MdCheck /></Icon>
+    <Icon color={Color.Accent}><IconCheck /></Icon>
   {:else}
-    <Icon color={Color.Tertiary}><MdCheck /></Icon>
+    <Icon color={Color.Tertiary}><IconCheck /></Icon>
   {/if}
 </div>
-
-<style>
-</style>

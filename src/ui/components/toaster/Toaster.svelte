@@ -1,8 +1,5 @@
 <script lang="ts">
-  import MdCheck from 'svelte-icons/md/MdCheck.svelte';
-  import MdErrorOutline from 'svelte-icons/md/MdErrorOutline.svelte';
-  import MdInfoOutline from 'svelte-icons/md/MdInfoOutline.svelte';
-  import MdWarning from 'svelte-icons/md/MdWarning.svelte';
+  import { IconCheck, IconCircleError, IconCircleInfo, IconCircleWarning } from '@/ui/icons';
   import { IconSize, RenderState } from '../../enums';
   import { settings, toaster } from '../../stores';
   import Icon from '../icon/Icon.svelte';
@@ -26,25 +23,25 @@
     {#if $toaster.data.type === 'info'}
       <div class="icon">
         <Icon size={IconSize.Smallest} color="var(--app-text-color)">
-          <svelte:component this={$toaster.data.icon || MdInfoOutline} />
+          <svelte:component this={$toaster.data.icon || IconCircleInfo} />
         </Icon>
       </div>
     {:else if $toaster.data.type === 'warning'}
       <div class="icon">
         <Icon size={IconSize.Smallest} color="var(--warning-color)">
-          <svelte:component this={$toaster.data.icon || MdWarning} />
+          <svelte:component this={$toaster.data.icon || IconCircleWarning} />
         </Icon>
       </div>
     {:else if $toaster.data.type === 'error'}
       <div class="icon">
         <Icon size={IconSize.Smallest} color="var(--error-color)">
-          <svelte:component this={$toaster.data.icon || MdErrorOutline} />
+          <svelte:component this={$toaster.data.icon || IconCircleError} />
         </Icon>
       </div>
     {:else if $toaster.data.type === 'success'}
       <div class="icon">
         <Icon size={IconSize.Smallest} color="var(--success-color)">
-          <svelte:component this={$toaster.data.icon || MdCheck} />
+          <svelte:component this={$toaster.data.icon || IconCheck} />
         </Icon>
       </div>
     {/if}

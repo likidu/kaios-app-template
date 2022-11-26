@@ -14,6 +14,3 @@
 <FormRow {label} {disabled} navi={{ itemId, onSelect: () => !disabled && onChange(!checked) }}>
   <Checkbox {checked} />
 </FormRow>
-
-<style>
-</style>
