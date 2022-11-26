@@ -17,6 +17,7 @@
   const menuItems: MenuItem[] = [
     { id: 'home', text: 'Home', route: '#/', icon: IconDiscover },
     { id: 'user', text: 'User', route: '/user', icon: IconUser },
+    { id: 'login', text: 'Login', route: '/login', icon: IconUser },
   ];
 </script>
 
