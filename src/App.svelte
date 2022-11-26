@@ -7,11 +7,12 @@
 
   import AppMenu from '@/lib/components/AppMenu.svelte';
 
-  import { Home, User, NotFound } from '@/lib/routes';
+  import { Login, Home, User, NotFound } from '@/lib/routes';
   import { settings } from '@/lib/stores/settings';
 
   const routes = {
     '/': Home,
+    '/login': Login,
     '/user': User,
     '*': NotFound,
   };
@@ -38,4 +39,3 @@
   <AppMenu slot="app-menu" />
   <Router {routes} />
 </OnyxApp>
-

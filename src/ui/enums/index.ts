@@ -1,3 +1,4 @@
+export * from './alignment';
 export * from './animations';
 export * from './color';
 export * from './contextKey';
