@@ -71,7 +71,7 @@
   }
 </script>
 
-<div class="root">
+<main class="root">
   <div class="view">
     <slot />
   </div>
@@ -98,7 +98,7 @@
   {#if $dialog.state !== RenderState.Destroyed}
     <Dialog />
   {/if}
-</div>
+</main>
 
 <style>
   .root {
