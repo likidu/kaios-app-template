@@ -1,9 +1,9 @@
 <script lang="ts">
-  import View from '@/ui/components/view/View.svelte';
-  import ViewContent from '@/ui/components/view/ViewContent.svelte';
   import CheckboxRow from '@/ui/components/form/CheckboxRow.svelte';
   import InlineSelectRow from '@/ui/components/form/InlineSelectRow.svelte';
   import Typography from '@/ui/components/Typography.svelte';
+  import View from '@/ui/components/view/View.svelte';
+  import ViewContent from '@/ui/components/view/ViewContent.svelte';
 
   import svelteLogo from '@/assets/svelte.svg';
 
@@ -31,6 +31,10 @@
       <img src="/vite.svg" class="logo" alt="Vite Logo" />
       <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
     </div>
+    <p class="line-clamp-2">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua.
+    </p>
     <h1 class="text-slate-500">Vite + Svelte</h1>
   </ViewContent>
 </View>
