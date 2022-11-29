@@ -23,7 +23,7 @@
         }
       },
     },
-    { priority: 2 }
+    { priority: 2 },
   );
 
   // Apply settings
@@ -47,24 +47,15 @@
       [TextSize.Large]: 11,
       [TextSize.Largest]: 12,
     };
-    document.documentElement.style.setProperty(
-      '--base-font-size',
-      `${textSize[$settings.textSize]}px`
-    );
+    document.documentElement.style.setProperty('--base-font-size', `${textSize[$settings.textSize]}px`);
 
     const weight = {
       [TextWeight.Light]: { regular: 300, bold: 400 },
       [TextWeight.Medium]: { regular: 400, bold: 600 },
       [TextWeight.Heavy]: { regular: 600, bold: 700 },
     };
-    document.documentElement.style.setProperty(
-      '--regular-font-weight',
-      `${weight[$settings.textWeight].regular}`
-    );
-    document.documentElement.style.setProperty(
-      '--bold-font-weight',
-      `${weight[$settings.textWeight].bold}`
-    );
+    document.documentElement.style.setProperty('--regular-font-weight', `${weight[$settings.textWeight].regular}`);
+    document.documentElement.style.setProperty('--bold-font-weight', `${weight[$settings.textWeight].bold}`);
 
     // Display Density
     document.body.dataset.density = $settings.displayDensity;
@@ -73,10 +64,7 @@
     document.documentElement.style.setProperty('--radius', `${$settings.borderRadius}px`);
 
     // Animations
-    document.documentElement.style.setProperty(
-      '--animation-speed',
-      `${$settings.animationSpeed}ms`
-    );
+    document.documentElement.style.setProperty('--animation-speed', `${$settings.animationSpeed}ms`);
 
     // App Menu
     document.documentElement.style.setProperty('--app-menu-width', `${$settings.appMenuWidth}vw`);
@@ -128,7 +116,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 9;
+    z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
