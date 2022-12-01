@@ -4,6 +4,7 @@
 
   export let navi: Navigation;
   export let disabled = false;
+  export let nofocus = false;
   export let contextMenu: ContextMenu = null;
   export let display: 'inline-block' | 'block' | 'flex' = 'block';
 
@@ -25,6 +26,7 @@
 <div
   class="root"
   class:disabled
+  class:nofocus
   style={`display: ${display};`}
   data-onyx-item-id={navi.itemId}
   data-onyx-shortcut={navi.shortcutKey}
@@ -44,5 +46,9 @@
 
   .disabled {
     opacity: 0.2;
+  }
+
+  .nofocus {
+    background: none;
   }
 </style>
