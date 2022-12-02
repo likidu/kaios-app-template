@@ -23,7 +23,7 @@
     display: flex;
     flex-direction: column;
     /* TODO: Make it as a parameter */
-    /* background-color: var(--card-color); */
+    background-color: var(--card-color);
     color: var(--text-color);
     border-radius: var(--radius) var(--radius) var(--radius) var(--radius);
   }

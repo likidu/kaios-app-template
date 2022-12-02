@@ -7,6 +7,8 @@
 
   import svelteLogo from '@/assets/svelte.svg';
 
+  import LineClamp from '@/lib/components/LineClamp.svelte';
+
   let values: any = {
     checkbox1: true,
     inlineSelect1: '1',
@@ -31,7 +33,13 @@
       <img src="/vite.svg" class="logo" alt="Vite Logo" />
       <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
     </div>
-    <p class="line-clamp-2">
+    <LineClamp lines={1}>
+      <p class="text-sky-300">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+      </p>
+    </LineClamp>
+    <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
       magna aliqua.
     </p>
