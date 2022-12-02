@@ -1,19 +1,25 @@
 <script lang="ts">
-  import Router, { location, replace, pop } from 'svelte-spa-router';
+  import Router, { location, pop } from 'svelte-spa-router';
 
-  import { OnyxKeys } from 'onyx-keys';
-  import { Onyx } from '@/ui/services';
   import OnyxApp from '@/ui/components/app/OnyxApp.svelte';
+  import { Onyx } from '@/ui/services';
+  import { OnyxKeys } from 'onyx-keys';
 
   import AppMenu from '@/lib/components/AppMenu.svelte';
 
-  import { Login, Home, User, NotFound } from '@/lib/routes';
+  import { Comment, Home, Login, NotFound, User } from '@/lib/routes';
   import { settings } from '@/lib/stores/settings';
+
+  OnyxKeys.setOptions({
+    repeatDelay: 2000,
+    repeatRate: 2000,
+  });
 
   const routes = {
     '/': Home,
     '/login': Login,
     '/user': User,
+    '/comment/:id': Comment,
     '*': NotFound,
   };
 

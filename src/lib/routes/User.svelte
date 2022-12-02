@@ -1,6 +1,7 @@
 <script lang="ts">
-  import { replace } from 'svelte-spa-router';
+  import { push, replace } from 'svelte-spa-router';
 
+  import LineClamp from '@/lib/components/LineClamp.svelte';
   import Button from '@/ui/components/buttons/Button.svelte';
   import Icon from '@/ui/components/icon/Icon.svelte';
   import ListItem from '@/ui/components/list/ListItem.svelte';
@@ -35,13 +36,16 @@
         navi={{
           itemId: `${i + 1}`,
           shortcutKey: getShortcutFromIndex(i),
+          onSelect: () => push(`/comment/${i + 1}`),
         }}
       >
         <div slot="bottom">
-          <p class="line-clamp-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.
-          </p>
+          <LineClamp lines={1}>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+            </p>
+          </LineClamp>
         </div>
       </ListItem>
     {/each}
