@@ -39,14 +39,14 @@
           onSelect: () => push(`/comment/${i + 1}`),
         }}
       >
-        <div slot="bottom">
+        <svelte:fragment slot="bottom">
           <LineClamp lines={1}>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua.
             </p>
           </LineClamp>
-        </div>
+        </svelte:fragment>
       </ListItem>
     {/each}
     <Button

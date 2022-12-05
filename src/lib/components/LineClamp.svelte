@@ -8,7 +8,7 @@
 
   onMount(async () => {
     const slot = textBlock.firstElementChild as HTMLElement;
-    !!process.env.IS_LEGACY ? webkitLineClamp(slot, lines) : slot.classList.add('line-clamp-2');
+    !!process.env.IS_LEGACY ? webkitLineClamp(slot, lines) : slot.classList.add(`line-clamp-${lines}`);
   });
 </script>
 

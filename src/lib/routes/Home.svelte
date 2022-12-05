@@ -33,13 +33,13 @@
       <img src="/vite.svg" class="logo" alt="Vite Logo" />
       <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
     </div>
-    <LineClamp lines={1}>
+    <LineClamp lines={2}>
       <p class="text-sky-300">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua.
       </p>
     </LineClamp>
-    <p>
+    <p class="line-clamp-1">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
       magna aliqua.
     </p>
