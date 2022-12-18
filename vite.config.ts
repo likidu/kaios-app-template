@@ -1,9 +1,9 @@
-import { resolve } from 'path';
-import { defineConfig } from 'vite';
-import { svelte } from '@sveltejs/vite-plugin-svelte';
-import { babel, getBabelOutputPlugin } from '@rollup/plugin-babel';
-import css from 'rollup-plugin-css-only';
-import del from 'rollup-plugin-delete';
+import { babel, getBabelOutputPlugin } from '@rollup/plugin-babel'
+import { svelte } from '@sveltejs/vite-plugin-svelte'
+import { resolve } from 'path'
+import css from 'rollup-plugin-css-only'
+import del from 'rollup-plugin-delete'
+import { defineConfig } from 'vite'
 
 const isLegacy = !!process.env.IS_LEGACY;
 
@@ -82,7 +82,7 @@ export default defineConfig({
     },
   },
   server: {
-    port: 5000,
+    port: 5173,
   },
   ...(isLegacy && legacyExtraConfig),
 });
